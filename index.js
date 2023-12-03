@@ -6,7 +6,6 @@ const button = document.querySelector("#send");
 let goal;
 
 
-
 button.addEventListener("click", enviar);
 
 function enviar() {
@@ -24,16 +23,29 @@ function enviar() {
 
 }
 
+
 go.addEventListener("click", answer);
 
 function answer() {
-
     const valor2 = parseInt(descobrir.value);
+
+    
+
 
     if (goal === valor2)
         resposta.innerHTML = "Congrats, you dif it!"
 
-    else
-        resposta.innerHTML = "You suck. Try again."
+
+    else if (valor2 >= 0 && valor2 <= 10){
+
+        
+       resposta.innerHTML = "You suck. Try again." 
+    }
+    else 
+        alert("Invalid Number.")
+       
+   
+
+ 
 
 }
